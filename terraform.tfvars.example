@@ -1,0 +1,41 @@
+aws_region  = "ap-south-1"
+aws_profile = "default"
+
+project_name = "kubeadm-aws"
+environment  = "dev"
+cluster_name = "kubeadm-dev"
+
+vpc_cidr = "10.10.0.0/16"
+availability_zones = [
+  "ap-south-1a",
+  "ap-south-1b"
+]
+public_subnet_cidrs = [
+  "10.10.1.0/24",
+  "10.10.2.0/24"
+]
+
+control_plane_instance_type = "c7i-flex.large"
+worker_instance_type        = "c7i-flex.large"
+worker_count                = 2
+
+control_plane_root_volume_size = 30
+worker_root_volume_size        = 30
+root_volume_type               = "gp3"
+
+kubernetes_version       = "1.35.6"
+kubernetes_minor_version = "v1.35"
+calico_version            = "v3.32.0"
+pod_network_cidr          = "192.168.0.0/16"
+service_cidr              = "10.96.0.0/12"
+
+# Replace this documentation-only address with your real public IP in /32 format.
+allowed_admin_cidr = "203.0.113.10/32"
+
+enable_ssh_access          = false
+enable_public_api_access   = true
+enable_nodeport_access     = false
+enable_detailed_monitoring = false
+store_kubeconfig_in_ssm    = true
+
+ssh_key_name = null

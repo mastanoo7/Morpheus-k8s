@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REGION=""
-CLUSTER=""
+REGION="ap-south-1"
+CLUSTER="kubeadm-dev"
 OUTPUT=""
 while [[ $# -gt 0 ]]; do
   case "$1" in

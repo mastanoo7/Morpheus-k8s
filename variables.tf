@@ -128,9 +128,9 @@ variable "service_cidr" {
 }
 variable "ssh_key_name" {
   type        = string
-  default     = null
+  default     = "morpheus"
   nullable    = true
-  description = "Existing EC2 key pair. SSH is disabled when null."
+  description = "Existing EC2 key pair attached to the instances. Set to null to attach no key pair."
 }
 variable "enable_ssh_access" {
   type        = bool

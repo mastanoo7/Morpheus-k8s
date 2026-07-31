@@ -7,7 +7,7 @@ resource "aws_instance" "worker" {
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.workers.id]
   iam_instance_profile        = aws_iam_instance_profile.worker.name
-  key_name                    = var.enable_ssh_access && var.ssh_key_name != null ? var.ssh_key_name : null
+  key_name                    = var.ssh_key_name
   monitoring                  = var.enable_detailed_monitoring
 
   metadata_options {

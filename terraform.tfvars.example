@@ -38,4 +38,4 @@ enable_nodeport_access     = false
 enable_detailed_monitoring = false
 store_kubeconfig_in_ssm    = true
 
-ssh_key_name = null
+ssh_key_name = "morpheus"

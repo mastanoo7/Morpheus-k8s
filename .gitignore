@@ -1,0 +1,42 @@
+# Terraform working directory and generated state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+crash.log
+crash.*.log
+
+# Local Terraform inputs (examples remain tracked)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
+
+# Credentials and cluster access files
+*.pem
+*.key
+kubeconfig
+kubeconfig-*
+*.kubeconfig
+
+# Downloaded/generated AWS CLI bundle
+scripts/aws/
+scripts/awscliv2.zip
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

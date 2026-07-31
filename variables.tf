@@ -9,6 +9,27 @@ variable "aws_profile" {
   default     = null
   nullable    = true
 }
+variable "access_key" {
+  type        = string
+  description = "AWS access key supplied securely through the Morpheus Terraform Profile."
+  default     = null
+  nullable    = true
+  sensitive   = true
+}
+variable "secret_key" {
+  type        = string
+  description = "AWS secret key supplied securely through the Morpheus Terraform Profile."
+  default     = null
+  nullable    = true
+  sensitive   = true
+}
+variable "session_token" {
+  type        = string
+  description = "Optional AWS session token for temporary credentials."
+  default     = null
+  nullable    = true
+  sensitive   = true
+}
 variable "project_name" {
   type        = string
   default     = "kubeadm-aws"

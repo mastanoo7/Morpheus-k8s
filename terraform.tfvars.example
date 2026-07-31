@@ -1,5 +1,5 @@
 aws_region  = "ap-south-1"
-aws_profile = "default"
+aws_profile = null
 
 project_name = "kubeadm-aws"
 environment  = "dev"
